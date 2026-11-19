@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    background-color: #e7c8c4;
+    color: #1a1818;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#flowerButton {
+
+    /*flower drawn by me because im so awesome*/
+    background-image: url('flower.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+
+    color: transparent;
+    border: none;
+
+    width: 400px;
+    height: 400px;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+
+
+#flowerButton:active {
+    transform: scale(0.95);
+}
+
+#flowerButton:hover {
+    transform: scale(1.05);
+}
+
+#flowerDisplay {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 30px 0;
+    color: #000000;
+    text-align: center;
+}
+
+#upgradeClicker,
+#autoClicker {
+    background-color: #ffffff;
+    color: #d79191;
+    border: 2px solid #9d4e4e;
+    padding: 12px 24px;
+    margin: 10px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s, color 0.2s;
+    width: 300px;
+}
+
+#upgradeClicker:hover,
+#autoClicker:hover {
+    background-color: #7d2e2e;
+    color: #f4c2c2;
+}
+
+#upgradeClicker:active,
+#autoClicker:active {
+    transform: scale(0.98);
+}
+
+/*game layout*/
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    max-width: 900px;
+    padding: 20px;
+    margin: auto;
+}
+
+.flower-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.shop-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(253, 235, 235, 0.85);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.shop-section h2 {
+    color: #794343;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    margin-bottom: 15px;
+    font-size: 3.0rem;
+}
+
+@media (min-width: 768px) {
+    .game-container {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+.site-header {
+    position: relative;
+    width: 100%;
+    min-height: 100px;
+    padding: 15px 25px;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 2px 10px rgba(49, 23, 23, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-title {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 4.0rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #794343;
+    text-shadow: 1px 2px 4px rgba(121, 67, 67, 0.2);
+}
+
+.home-button {
+    position: absolute;
+    left: 25px;
+    display: inline-block;
+    transition: transform 0.15s ease-in-out;
+}
+
+.home-button img {
+    width: 60px;
+    height: auto;
+    display: block;
+}
+
+.home-button:hover {
+    transform: scale(1.1);
+}
+
+.home-button:active {
+    transform: scale(0.95);
+}
+
+/*homepage*/
+
+.home-container {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    width: 100%;
+    padding: 30px 20px;
+}
+
+.home-image {
+    max-width: 100%;
+    width: 200px;
+    height: auto;
+    display: block;
+}
+
+.intro {
+    text-align: center;
+    background-color: rgba(253, 235, 235, 0.85);
+    padding: 50px 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    max-width: 550px;
+    width: 90%;
+}
+
+.intro h1 {
+    color: #794343;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.intro p {
+    font-size: 1.2rem;
+    color: #5a3a3a;
+    margin-bottom: 30px;
+}
+
+.startButton {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #ffffff;
+    color: #d79191;
+    border: 2px solid #9d4e4e;
+    padding: 14px 50px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s, transform 0.15s ease-in-out;
+}
+
+.startButton:hover {
+    background-color: #7d2e2e;
+    color: #f4c2c2;
+    transform: scale(1.06);
+}
+
+.startButton:active {
+    transform: scale(0.95);
+}
